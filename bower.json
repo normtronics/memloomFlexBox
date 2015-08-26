@@ -1,0 +1,11 @@
+{
+  "name": "memloomLayout",
+  "version": "0.0.0",
+  "authors": [
+    "Christopher <cpn9025@rit.edu>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "flexboxgrid": "~6.2.0"
+  }
+}
