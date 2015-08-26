@@ -2973,6 +2973,9 @@ strong {
 }
 
 /* line 209, ../../app/assets/stylesheets/main.css.scss */
+/*
+  You shouldn't be using the * selector
+*/
 /** {
   -moz-box-sizing: content-box !important;
   -moz-font-smoothing: antialiased;
@@ -3012,6 +3015,9 @@ html {
 }
 
 /* line 245, ../../app/assets/stylesheets/main.css.scss */
+/*
+  Needs to be removed, this is just bad CSS
+*/
 body {
   /*-khtml-user-select: none;
   -moz-user-select: none;
@@ -4642,6 +4648,10 @@ body.registrations label h3 {
 /**********************************************************/
 /************************** MAIN TOP **********************/
 /**********************************************************/
+
+/*
+  Needs to be removed from css
+*/
 /* line 1900, ../../app/assets/stylesheets/main.css.scss */
 /*.row {
   margin: 0 0 40px 0 !important;
