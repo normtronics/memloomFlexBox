@@ -144,12 +144,15 @@
 		    	overlay.addEventListener('click', function(){
 		    		document.getElementById('ov').style.display = 'none';
 					document.getElementById('mo').style.display = 'none';
+					document.body.style.overflow = 'scroll';
 		    	})
 
 				for(var i = 0; i < content.length; i++){
 					content[i].addEventListener('click', function(){
 						document.getElementById('ov').style.display = 'block';
 						document.getElementById('mo').style.display = 'block';
+
+						document.body.style.overflow = 'hidden';
 					}, false)
 				}
 			};
