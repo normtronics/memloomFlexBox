@@ -46,7 +46,7 @@
 
 			    position: fixed;
 				bottom: 0;
-				padding: 20px;
+				padding: 20px 0px;
 				background-color: #fff;
 
 				width: 100%;
@@ -56,11 +56,19 @@
 			.gall-label{
 				display: block;
 			    text-align: center;
-			    width: 100%;
-			    margin: 0;
 			    font-size: initial;
 			    color: initial;
 			    padding-bottom: 16px;
+
+			    margin: 0 auto;
+			    margin-bottom: 10px;
+			    border-radius: 5px;
+			    border: 1px solid #a3b845;
+			    width: initial;
+			}
+
+			.gal-label{
+				text-align: center;
 			}
 
 			.gall-space-bottom{
@@ -127,7 +135,6 @@
 			    border: none;
 			    border-radius: 5px;
 			}
-
 
 			.hidden{
 				display: none;
@@ -262,7 +269,7 @@
 
 
 			<form class="gall-form">
-				<label class="gall-label">Story Name</label>
+				<input class="gall-label" placeholder="Story Name"></input>
 				<button class="gall-btn">Submit</button>
 			</form>
 
