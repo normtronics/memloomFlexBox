@@ -10,6 +10,8 @@
 				background-size: contain;
 				background-position: center;
         		background-repeat: no-repeat;
+        		position: relative;
+        		z-index: -999999;
 			}
 
 			.content img {
@@ -22,6 +24,48 @@
 				font-weight: lighter;
 				color: #000;
 				font-family: inherit;
+			}
+
+			.gal-wrapper:hover{
+				background-color: rgba(163,184,69,0.5);
+				content: "This is a text";
+			}
+
+
+			.gall-btn{
+				padding: 10px 60px;
+			    background-color: #a3b845;
+			    border: none;
+			    border-radius: 5px;
+			}
+
+			.gall-form{
+				text-align: center;
+				padding-top: 16px;
+				border: 1px solid #000;
+			    margin-top: 16px;
+
+			    position: fixed;
+				bottom: 0;
+				padding: 20px;
+				background-color: #fff;
+
+				width: 100%;
+    			left: 0;
+			}
+
+			.gall-label{
+				display: block;
+			    text-align: center;
+			    width: 100%;
+			    margin: 0;
+			    font-size: initial;
+			    color: initial;
+			    padding-bottom: 16px;
+			}
+
+			.gall-space-bottom{
+				margin-bottom: 150px;
 			}
 
 		
@@ -37,7 +81,7 @@
 			}
 
 			.overlay{
-				position: absolute;
+				position: fixed;
 			  	top: 0;
 			  	left: 0;
 			  	width: 100%;
@@ -99,91 +143,115 @@
 		<hr class="green top_rule">
 		<div class="container-fluid">
 
-			<div class="row">
+			<div class="row gall-space-bottom">
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content"
-					style="background-image: url('http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content"
+						style="background-image: url('http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Bundesrat_der_Schweiz_2008_Teil_1.JPG')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Bundesrat_der_Schweiz_2008_Teil_1.JPG')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 
 				
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('http://cdn.history.com/sites/2/2013/11/new-york-empire-state-1.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('http://cdn.history.com/sites/2/2013/11/new-york-empire-state-1.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('http://www.therootscrew.com/images/band/the-roots-2009-crop.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('http://www.therootscrew.com/images/band/the-roots-2009-crop.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 				
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('http://foolsgoldrecs.com/images_web/run2.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('http://foolsgoldrecs.com/images_web/run2.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('http://afripopmag.com/wp-content/uploads/2010/01/kenna2.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('http://afripopmag.com/wp-content/uploads/2010/01/kenna2.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('http://static1.squarespace.com/static/553bc8d2e4b0e21d569f6cd4/t/55783212e4b01bea7bb69e7d/1433940499012/')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('http://static1.squarespace.com/static/553bc8d2e4b0e21d569f6cd4/t/55783212e4b01bea7bb69e7d/1433940499012/')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
 
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>	
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="sixteen-nine content" 
-					style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
-						<h2>This is content</h2>
+					<div class="gal-wrapper">
+						<div class="sixteen-nine content" 
+						style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
+							<h2>This is content</h2>
+						</div>
 					</div>
 				</div>
-
 			</div>
+
+
+			<form class="gall-form">
+				<label class="gall-label">Story Name</label>
+				<button class="gall-btn">Submit</button>
+			</form>
+
+			<div id="ov" class="overlay hidden"></div>
+			<div id="mo" class="modal hidden">I'm the modal window!</div>
 		</div>
-
-
-		<div id="ov" class="overlay hidden"></div>
-		<div id="mo" class="modal hidden">I'm the modal window!</div>
 
 		<script type="text/javascript">
 
 			//Load this in rails with jquery function
 			window.onload = function() {
-			   var content = document.getElementsByClassName("content");
+			   var content = document.getElementsByClassName("gal-wrapper");
 
 		    	var overlay = document.getElementById('ov');
 
