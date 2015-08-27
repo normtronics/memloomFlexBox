@@ -7,17 +7,20 @@
 		<style type="text/css">
 			.content {
 				width: 100%;
-				padding-top: 16px;
+				background-size: contain;
+				background-position: center;
+        		background-repeat: no-repeat;
 			}
 
 			.content img {
 				width: inherit;
 			}
 
-			.gutter{
-				padding-top: 16px;
+			.content h2 {
+				margin: 0;
 			}
 
+		
 			hr.top_rule {
 			    height: 3px;
 			    margin: 0;
@@ -63,70 +66,107 @@
 				display: block;
 			}
 
+			.sixteen-nine {
+			  	position: relative;
+			  	border: 1px solid #000;
+			}
+			.sixteen-nine:before {
+			  	display: block;
+			 	 content: "";
+			 	 width: 100%;
+			 	 height: auto;
+			  	padding-top: 56.25%;
+			}
+			/*.sixteen-nine > .content {
+			 	position: absolute;
+			 	top: 0;
+			  	left: 0;
+			  	right: 0;
+			  	bottom: 0;
+			}*/
+
+			.gutter{
+				padding-top: 16px;
+			}
+
 		</style>
 	</head>
 	<body>
 		<hr class="green top_rule">
 		<div class="container-fluid">
+
 			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content"
+					style="background-image: url('http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg')">
+						<h2>This is content</h2>
 					</div>
 				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
-					</div>
-				</div>	
-
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
-					</div>
-				</div>	
-
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
-					</div>
-				</div>		
-			</div>
-
-
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Bundesrat_der_Schweiz_2008_Teil_1.JPG')">
+						<h2>This is content</h2>
 					</div>
 				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('https://www.google.com/search?q=people&espv=2&biw=1526&bih=801&site=webhp&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMIj6WY1JjIxwIVljCICh0SjA6S#imgrc=9ze5WqUA05I5_M%3A')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('http://cdn.history.com/sites/2/2013/11/new-york-empire-state-1.jpg')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('http://www.therootscrew.com/images/band/the-roots-2009-crop.jpg')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('http://foolsgoldrecs.com/images_web/run2.jpg')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('http://afripopmag.com/wp-content/uploads/2010/01/kenna2.jpg')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('http://static1.squarespace.com/static/553bc8d2e4b0e21d569f6cd4/t/55783212e4b01bea7bb69e7d/1433940499012/')">
+						<h2>This is content</h2>
+					</div>
+				</div>
+
+
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
+					<div class="sixteen-nine content" 
+					style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
+						<h2>This is content</h2>
 					</div>
 				</div>	
 
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
-					</div>
-				</div>	
-
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-					<div class="content">
-						<img 
-						src="http://cdn1.pri.org/sites/default/files/story/images/mustang-paris-megathon-charlie.jpg">
-					</div>
-				</div>		
 			</div>
 		</div>
 
