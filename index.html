@@ -28,7 +28,6 @@
 
 			.gal-wrapper:hover{
 				background-color: rgba(163,184,69,0.5);
-				content: "This is a text";
 			}
 
 
@@ -91,18 +90,42 @@
 			}
 
 			.modal{
-				width: 300px;
-			    height: 200px;
+				width: 75%;
+			    height: auto;
 			    line-height: 200px;
 			    position: fixed;
 			    top: 50%; 
 			    left: 50%;
-			    margin-top: -100px;
-			    margin-left: -150px;
+			    margin-left: -38%;
+    			margin-top: -15%;
 			    background-color:  #a3b845;
 			    border-radius: 5px;
 			    text-align: center;
 			    z-index: 11; /* 1px higher than the overlay layer */
+			}
+
+			.modal .content {
+				border:none;
+			}
+
+			.modal .gall-form{
+				text-align: center;
+			    padding-top: 16px;
+			    border: none;
+			    margin-top: 16px;
+			    position: relative; 
+			    bottom: 0;
+			    padding: 20px;
+			    background-color: inherit;
+			    width: 100%;
+			    left: 0;
+			}
+
+			.modal .gall-btn{
+				padding: 10px 60px;
+			    background-color: #fff;
+			    border: none;
+			    border-radius: 5px;
 			}
 
 
@@ -244,7 +267,29 @@
 			</form>
 
 			<div id="ov" class="overlay hidden"></div>
-			<div id="mo" class="modal hidden">I'm the modal window!</div>
+			<div id="mo" class="modal hidden">
+				<div class="container-fluid">
+					<div  class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 gutter">
+							<div class="sixteen-nine content" 
+							style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
+								<h2></h2>
+							</div>
+						</div>	
+
+						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 gutter">
+							<div class="sixteen-nine content" 
+							style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
+								<h2></h2>
+							</div>
+						</div>
+
+						<form class="gall-form">
+							<button class="gall-btn">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script type="text/javascript">
