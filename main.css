@@ -2975,6 +2975,7 @@ strong {
 /* line 209, ../../app/assets/stylesheets/main.css.scss */
 /*
   You shouldn't be using the * selector
+  remove this
 */
 /** {
   -moz-box-sizing: content-box !important;
@@ -2985,14 +2986,17 @@ strong {
   font-smoothing: antialiased;
 }*/
 
-/* line 218, ../../app/assets/stylesheets/main.css.scss */
-html, body {
+
+/* line 218, ../../app/assets/stylesheets/main.css.scss 
+  Remove this
+*/
+/*html, body {
   -webkit-flex-direction: column;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   height: 100% !important;
-}
+}*/
 
 /* line 226, ../../app/assets/stylesheets/main.css.scss */
 html > body #main {
@@ -3020,7 +3024,7 @@ html {
 */
 body {
   /*-khtml-user-select: none;
-  -moz-user-select: none;
+  -moz-user-select: none
   -ms-overflow-style: scrollbar;
   -ms-user-select: none;
   -webkit-align-items: center;
