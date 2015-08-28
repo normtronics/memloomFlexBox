@@ -1,0 +1,62 @@
+// Margin (0-12)
+@for $i from 0 through 12 {
+  .m-#{$i} {
+    margin: #{$i}rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+.rel-pos{
+  position: relative;
+}
+
+.abs-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.fluid_text{
+  width: 100%;
+  height: auto;
+  text-align: left;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.div-horizontal-center{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Padding (0-12)
+@for $i from 0 through 12 {
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}rem;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}rem;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}rem;
+  }
+}

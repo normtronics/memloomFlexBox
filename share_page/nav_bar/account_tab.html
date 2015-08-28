@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/nav.css">
+
+    <style>
+
+        /*.r_button{
+          height: 2rem;
+        }*/
+    </style>
+</head>
+<body>
+
+    <div id="super_nav">
+        <ul>
+            <li><a href="#/signinxyz">sign in</a></li>
+            <li style="color:#9ea5ab;">or</li>
+            <li><a href="#/signupxyz">sign up</a></li>
+        </ul>
+    </div>
+
+    <div id="nav" class="frame mb-1">
+        <div class="bit-3 ">
+            <img id="logo_image" src="images/memloom_main_logo.svg" alt="" class="bit-1" >
+        </div>
+
+        <ul class="nav_link" class="inline bit-9 ">
+            <li v-repeat="nav in navinfo"
+                class="{{nav.no_dots ? '': 'norm'}} bit-9 size-transition"
+                style="float: left;">
+                <a v-cloak href="/{{nav.link}}">{{nav.link_name}}</a>
+            </li>
+        </ul>www
+    </div>
+
+
+    <div class="frame account_bar content_zone">
+        <div  class="bit-2 p-0 m-0 ">
+            <div v-on="click: clickTab(tab)"
+                 v-cloak v-repeat="tab in tabs"
+                 class="bit-{{tab_length}} pb-0 mb-0 tab"
+                 style="background-color:{{tab.tab_color}};">
+                    <p>{{tab.tab_name}}</p>
+            </div>
+        </div>
+        <div class="bit-2">
+          <div class="bit-1"></div>
+        </div>
+    </div>
+
+    <div class="frame content_zone" style="display: none;">
+        <div class="bit-1 p-1" style="color: #383838; background-color: #bbb;">
+            You can roll over any story card to see its story options.
+        </div>
+        <div class="bit-1" style="background-color: #d8d8d8;">
+            <div class="bit-1">
+                <div class="bit-1 p-2" >
+                    <div id="my_stories" v-if="tabs[0].active">
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both; padding: 1rem;">
+
+                            </div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                    </div>
+
+                    <div id="from_friends" v-if="tabs[1].active">
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                    </div>
+
+                    <div id="in_galleries" v-if="tabs[2].active">
+                        <div class="card">
+                            <div class="bit-1" style="height: 8rem;">Image</div>
+                            <div class="" style="background-color: #3abcc6; min-height: 6rem; width: 100%; clear: both;">Text</div>
+                            <div class="bit-1" style="background-color: #17c626; min-height: 2rem;">Is Shared</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="frame share_content_zone content_zone">
+        <div class="bit-1 p-1" style="color: #383838; background-color: #bbb;" v-cloak>
+            You are about to share the story {{story_name}}
+        </div>
+
+
+        <div id="email_share" class="bit-1 tab_page" v-if="tabs[0].active">
+            <div class="bit-1">
+                <div class="bit-1" >
+                    <div class="bit-75">
+                        <div class="bit-1 p-0 pb-1">
+                            <p class="bit-2">Share With:</p>
+                            <a class="bit-2 add_friends_button" href="#">
+                              Add friends from address book
+                            </a>
+                        </div>
+                        <div class="bit-1 " style="background-color: #fcfcfc; max-height: 7rem; overflow: auto;">
+                            <textarea class="fluid_text" name="name" rows="10" cols="21"></textarea>
+                        </div>
+                        <div class="bit-1 p-0 pt-1" style="padding-bottom: 0.5rem;">
+                            <p class="bit-2">Personalized Message</p>
+                        </div>
+                        <div class="bit-1 " style="background-color: #fcfcfc; max-height: 7rem;overflow: auto;">
+                            <textarea class="fluid_text" name="name" rows="10" cols="21"></textarea>
+                        </div>
+                    </div>
+                    <div class="bit-25">
+                        <p class="bit-1" style="padding-bottom: 1.5rem;">
+                            Currently Shared With
+                        </p>
+                        <div class="bit-1 scroll-list" style="background-color: white; height: 17.27rem; overflow: auto;">
+                            <textarea class="fluid_text" name="name" rows="15" cols="21"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="bit-1">
+                      <p class="bit-2">Share Story</p>
+                      <div class="bit-1 " style="background-color: #fcfcfc;">
+                          <div class="bit-75" style="overflow:auto; max-height: 8rem;">
+                            <h5 class="bit-1">Require my friends to login to Memloom</h5>
+                            <p class="bit-1" >
+                                When you choose to uncheck this button, your friends can forward your story to others and it can be viewed by anyone who is given a link to it.
+                                When this button is checked, your friends must register or login at Memloom.com in order to view your story.
+                            </p>
+                          </div>
+                          <div class="bit-25 rel-pos" style="min-height: 8rem;">
+                              <a id="share_my_story" href="#" class=" abs-center">
+                                  Share My Story Now
+                              </a>
+                          </div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="public_link" class="bit-1 tab_page all_center" v-if="tabs[1].active">
+            <h3 class="p-1">Share Your Story Using A Public Link</h3>
+
+            <p class="p-1">
+              To quickly and easily share your stories, just
+              <strong>
+                copy and paste the link below
+              </strong>
+              into emails, social networking
+              <br>
+              sites, blogs, instant messengers and more.  Public links will allow anyone with the link to view your story.
+            </p>
+
+            <div class="bit-1 p-2">
+                <div class="link_button">
+                  <div class="button_svg">
+                    SVG
+                  </div>
+                  <div class="link_url">
+                    Link
+                  </div>
+                </div>
+            </div>
+            <hr>
+
+            <p class="pt-2 pb-2">
+                * If necessary, you can reset your public link. Doing this will permanently disable the old link.
+                <br>
+                whenever it has previously been shared, and only the new public link to your story will function.
+            </p>
+        </div>
+
+        <div id="embed" class="bit-1 tab_page all_center" v-if="tabs[2].active">
+          <h3 class="p-1">Share Your Story Using A Public Link</h3>
+          <p class="p-1">
+            To quickly and easily share your stories, just
+            <strong>
+              copy and paste the link below
+            </strong>
+            into emails, social networking
+            <br>
+            sites, blogs, instant messengers and more.  Public links will allow anyone with the link to view your story.
+          </p>
+          <div class="bit-1 p-1">
+            <div class="link_button">
+                <div class="button_svg">
+                  SVG
+                </div>
+                <div class="link_url">
+                  Link
+                </div>
+                <div class="resize_container bit-1">
+
+                </div>
+            </div>
+          </div>
+
+          <p class="pt-2 pb-2">
+              * If necessary, you can reset your public link. Doing this will permanently disable the old link.
+              <br>
+              whenever it has previously been shared, and only the new public link to your story will function.
+          </p>
+        </div>
+
+        <div id="facebook" class="bit-1 tab_page" v-if="tabs[3].active">
+          <div class="bit-1 p-1 pl-2">
+            <h3>Post this story to your facebook news feed.</h3>
+            <div class="bit-2">
+              <img src="images/fbfinal_full.png" alt="" class="facebook_example p-2" style="width: 75%;">
+            </div>
+            <div class="bit-2">
+              <p>
+                To embed your story in the layout of an existing website or blog, copy and paste the code below into the approrpriate are of the destinateion site.  You can adjust the size of the embedded story by changing the settings below
+              </p>
+              <h3>Add An Optional Message To Your Post (200 CHARACTERS):</h3>
+              <textarea name="name" rows="8" cols="40" style="width: 100%;"></textarea>
+            </div>
+          </div>
+          <hr>
+          <div class="bit-1 rel-pos" style="height: 10rem;">
+              <a id="share_on_facebook" class=" abs-center">
+                Share This Story On Facebook
+              </a>
+          </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: 'body',
+            data: {
+                navinfo: [
+
+                    {link: "galleries", link_name: "Galleries", no_dots:false},
+                    {link: "about", link_name: "About Us", no_dots:false},
+                    {link: "how", link_name: "How We Work", no_dots:false},
+                    {link: "blog", link_name: "Blog", no_dots:false},
+                    {link: "users", link_name: "My Account", no_dots:true}
+                ],
+                tabs: [
+                    {tab_name: "My Stories", active: true, tab_color: '#3294d9'},
+                    {tab_name: "From Friends", active: false, tab_color: '#933cd9'},
+                    {tab_name: "In Galleries", active: false, tab_color: '#d9534f'}
+                ],
+                tabs: [
+                    {tab_name: "Email", active: false, tab_color: '#99AE45'},
+                    {tab_name: "Public Link", active: false, tab_color: '#933cd9'},
+                    {tab_name: "Embed", active: true, tab_color: '#d9534f'},
+                    {tab_name: "Facebook", active: false, tab_color: '#3294d9'}
+                ]
+            },
+            methods: {
+                clickTab: function (tab) {
+                    // Get current tab index by name
+                    for (var i =  0; i< vm.tabs.length; i++){
+                        if(vm.tabs[i].tab_name === tab.tab_name){
+                            vm.tabs[i].active = true;
+                        }else{
+                            vm.tabs[i].active = false;
+                        }
+                    }
+                }
+            },
+            computed: {
+              tab_length: function () {
+                return this.tabs.length;
+              }
+            }
+        });
+
+
+    </script>
+</body>
+</html>

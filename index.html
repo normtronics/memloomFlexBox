@@ -3,7 +3,8 @@
 		<link rel="stylesheet" type="text/css" href="./bower_components/flexboxgrid/dist/flexboxgrid.css">
 		<link rel="stylesheet" type="text/css" href="./bower_components/flexboxgrid/vendor/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="./main.css">
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.12/vue.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js" charset="utf-8"></script>
 		<style type="text/css">
 			.content {
 				width: 100%;
@@ -25,46 +26,57 @@
 				color: #000;
 				font-family: inherit;
 			}
-
-			.gal-wrapper:hover{
-				background-color: rgba(163,184,69,0.5);
+			.gal-wrapper{
+				transition: background-color 0.3s, color 0.15s;
+				font-size: 1.2em;
 			}
 
+			.gal-wrapper h2{
+				transition: color 0.15s;
+				font-size: 1em;
+			}
+
+			.gal-wrapper:hover {
+				background-color: rgba(163,184,69,0.8);
+			}
+
+			.gal-wrapper:hover > h2 {
+				color: white;
+			}
 
 			.gall-btn{
-				padding: 10px 60px;
+					padding: 10px 60px;
 			    background-color: #a3b845;
 			    border: none;
-			    border-radius: 5px;
+			    width: 100%;
 			}
 
 			.gall-form{
 				text-align: center;
-				padding-top: 16px;
-				border: 1px solid #000;
-			    margin-top: 16px;
-
-			    position: fixed;
-				bottom: 0;
-				padding: 20px 0px;
-				background-color: #fff;
-
-				width: 100%;
-    			left: 0;
+		    padding-top: 16px;
+		    /* border: 1px solid #000; */
+		    margin-top: 16px;
+		    position: fixed;
+		    bottom: 0;
+		    /* padding: 20px 0px; */
+		    background-color: #fff;
+		    width: 100%;
+		    left: 0;
 			}
 
 			.gall-label{
 				display: block;
-			    text-align: center;
-			    font-size: initial;
-			    color: initial;
-			    padding-bottom: 16px;
-
-			    margin: 0 auto;
-			    margin-bottom: 10px;
-			    border-radius: 5px;
-			    border: 1px solid #a3b845;
-			    width: initial;
+				text-align: center;
+				font-size: initial;
+				color: initial;
+				padding-bottom: 0.7rem;
+				padding-top: 0.7rem;
+				margin: 0 auto;
+				width: 100%;
+				outline: 0;
+				border: 0;
+				border-bottom: 1px solid #74B845;
+				border-top: 1px solid #74B845;
 			}
 
 			.gal-label{
@@ -75,7 +87,7 @@
 				margin-bottom: 150px;
 			}
 
-		
+
 			hr.top_rule {
 			    height: 3px;
 			    margin: 0;
@@ -102,7 +114,7 @@
 			    height: auto;
 			    line-height: 200px;
 			    position: fixed;
-			    top: 50%; 
+			    top: 50%;
 			    left: 50%;
 			    margin-left: -38%;
     			margin-top: -15%;
@@ -121,7 +133,7 @@
 			    padding-top: 16px;
 			    border: none;
 			    margin-top: 16px;
-			    position: relative; 
+			    position: relative;
 			    bottom: 0;
 			    padding: 20px;
 			    background-color: inherit;
@@ -185,147 +197,196 @@
 
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
 					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
+						<div class="sixteen-nine content"
 						style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Bundesrat_der_Schweiz_2008_Teil_1.JPG')">
 							<h2>This is content</h2>
 						</div>
 					</div>
 				</div>
 
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
 					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
+						<div class="sixteen-nine content"
 						style="background-image: url('http://cdn.history.com/sites/2/2013/11/new-york-empire-state-1.jpg')">
 							<h2>This is content</h2>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
 					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
+						<div class="sixteen-nine content"
 						style="background-image: url('http://www.therootscrew.com/images/band/the-roots-2009-crop.jpg')">
 							<h2>This is content</h2>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
 					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
+						<div class="sixteen-nine content"
 						style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
 							<h2>This is content</h2>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
 					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
+						<div class="sixteen-nine content"
 						style="background-image: url('http://foolsgoldrecs.com/images_web/run2.jpg')">
 							<h2>This is content</h2>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
-						style="background-image: url('http://afripopmag.com/wp-content/uploads/2010/01/kenna2.jpg')">
-							<h2>This is content</h2>
-						</div>
-					</div>
-				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
-						style="background-image: url('http://static1.squarespace.com/static/553bc8d2e4b0e21d569f6cd4/t/55783212e4b01bea7bb69e7d/1433940499012/')">
-							<h2>This is content</h2>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
-						style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
-							<h2>This is content</h2>
-						</div>
-					</div>
-				</div>	
-
-				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 gutter">
-					<div class="gal-wrapper">
-						<div class="sixteen-nine content" 
-						style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
-							<h2>This is content</h2>
-						</div>
-					</div>
-				</div>
 			</div>
 
 
-			<form class="gall-form">
-				<input class="gall-label" placeholder="Story Name"></input>
-				<button class="gall-btn">Submit</button>
-			</form>
 
-			<div id="ov" class="overlay hidden"></div>
-			<div id="mo" class="modal hidden">
-				<div class="container-fluid">
-					<div  class="row">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 gutter">
-							<div class="sixteen-nine content" 
-							style="background-image: url('https://9to5mac.files.wordpress.com/2015/03/pro-tools-12.jpg')">
-								<h2></h2>
-							</div>
-						</div>	
-
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 gutter">
-							<div class="sixteen-nine content" 
-							style="background-image: url('https://eliteuga.files.wordpress.com/2014/12/faepgbe.jpg')">
-								<h2></h2>
-							</div>
-						</div>
-
-						<form class="gall-form">
-							<button class="gall-btn">Submit</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<script type="text/javascript">
+			//
+			// //Load this in rails with jquery function
+			// window.onload = function() {
+			//    var content = document.getElementsByClassName("gal-wrapper");
+			//
+		  //   	var overlay = document.getElementById('ov');
+			//
+		  //   	overlay.addEventListener('click', function(){
+		  //   		document.getElementById('ov').style.display = 'none';
+			// 		document.getElementById('mo').style.display = 'none';
+			// 		document.body.style.overflow = 'scroll';
+		  //   	})
+			//
+			// 	for(var i = 0; i < content.length; i++){
+			// 		content[i].addEventListener('click', function(){
+			// 			document.getElementById('ov').style.display = 'block';
+			// 			document.getElementById('mo').style.display = 'block';
+			//
+			// 			document.body.style.overflow = 'hidden';
+			// 		}, false)
+			// 	}
+			// };
 
-			//Load this in rails with jquery function
-			window.onload = function() {
-			   var content = document.getElementsByClassName("gal-wrapper");
-
-		    	var overlay = document.getElementById('ov');
-
-		    	overlay.addEventListener('click', function(){
-		    		document.getElementById('ov').style.display = 'none';
-					document.getElementById('mo').style.display = 'none';
-					document.body.style.overflow = 'scroll';
-		    	})
-
-				for(var i = 0; i < content.length; i++){
-					content[i].addEventListener('click', function(){
-						document.getElementById('ov').style.display = 'block';
-						document.getElementById('mo').style.display = 'block';
-
-						document.body.style.overflow = 'hidden';
-					}, false)
-				}
-			};
-		   
 		</script>
+		<script>
+		/**
+			* Created by kevin on 8/23/15.
+			*/
+
+			/*
+			* cb stands for callback
+			* */
+
+
+			//This is a map of all of the most important variables that will need to be accessed in multiple cases
+			var important_gallery_info = {
+				last_quick_story: 0,
+				last_story: 0,
+				last_page: 0
+			};
+
+
+			// Used to upload all the needed resources to online
+			//
+			var uploadMedia = function (form_data, callback) {
+				$.post('/quick/upload', form_data, function (data) {
+						callback(data);
+				})
+			};
+
+
+			/*
+			* Get the gallery information quickly
+			* */
+			var getGalleryCards = function (callback) {
+				var last_of = {
+						last_page: important_gallery_info.last_story
+				};
+				$.post('http://localhost:3000/api/get/all_stories', last_of, function (data) {
+						callback(data);
+				});
+			};
+
+
+			/*
+			* Get Story information by id
+			**/
+			var getStoryInfo = function (storyId, callback) {
+				$.post('/quick/get_story', {id: storyId}, function (data) {
+						callback(data);
+				});
+			};
+
+			/*
+			* Gets story sharing information
+			**/
+			var shareStoryInfo = function (storyId, callback) {
+				$.post('/quick/share_story', {id: storyId}, function (data) {
+						callback(data);
+				});
+			};
+
+
+
+			/*
+			* Create a story by with the upload information
+			**/
+			var createEasyStory = function (storyId, callback) {
+				$.post('/quick/create', {id: storyId}, function (data) {
+						callback(data);
+				});
+			};
+
+
+			// Need to set a default tabs
+			var gallery = new Vue({
+				el: '#gallery',
+				data: {
+						gallery_stories: {},
+						gallery_quick_stories: {},
+						gallery_view: [], // Randomize stories and quick_stories together with image and name
+						last_page: 0,
+						loaded_story: {},
+						modal_view_activated: false
+				},
+				methods: {
+						click_story: function (story) {
+								getStoryInfo(story.id, function (data) {
+										// Current Loaded Story
+										loaded_story = data;
+										// Activate Modal
+										// TODO: Create Modal that inherits the data of loaded story and make it only show if
+										modal_view_activated = false;
+								});
+						},
+						get_stories: function (){
+								getGalleryCards(function (data) {
+										console.log(data);
+										if(data){
+											this.gallery_stories = data.stories;
+											this.gallery_quick_stories = data.quick_stories;
+											this.last_page = data.last_page;
+										}
+								});
+						}
+				},
+				computed: {
+
+				}
+			});
+
+
+			(function () {
+				console.log("Hello World");
+				// gallery.get_stories()
+			}());
+		</script>
+
+
 	</body>
 
 </html>
-
-

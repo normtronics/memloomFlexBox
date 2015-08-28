@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+    <!--  style="background-color: red; "-->
+    <div id="super_nav">
+        <ul>
+            <li><a href="#/signinxyz">Sign In</a></li>
+            <li class="or">or</li>
+            <li><a href="#/signupxyz">Sign Up</a></li>
+        </ul>
+    </div>w
+
+    <div id="nav" class="frame ">
+        <div class="bit-3 ">
+            <img id="logo_image" src="images/memloom_main_logo.svg" alt="" class="bit-1" >
+        </div>
+
+        <ul class="nav_link" class="inline bit-9">
+            <li v-cloak v-repeat="nav in navinfo"
+                class=" bit-9 size-transition"
+                style="float: left;">
+                <a href="/{{nav.link}}">{{nav.link_name}}</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#nav',
+            data: {
+                navinfo: [
+//                    {link: "signup", link_name: "Sign Up", last:false},
+                    {link: "galleries", link_name: "Galleries", last:false},
+                    {link: "about", link_name: "About Us", last:false},
+                    {link: "how", link_name: "How We Work", last:false},
+                    {link: "blog", link_name: "Blog", last:false},
+//                    {link: "signin", link_name: "Sign In", last:true}
+                ]
+            }
+        });
+
+
+    </script>
+</body>
+</html>

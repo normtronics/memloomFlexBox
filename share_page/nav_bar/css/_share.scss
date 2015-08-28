@@ -1,0 +1,157 @@
+#share_my_story{
+  background-color: $mem-green-color;
+  height:3rem;
+  color:white;
+  text-align: center;
+  width: 80%;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+#share_on_facebook{
+  background-color: $mem-blue-color;
+  height:3rem;
+  color:white;
+  text-align: center;
+  width: 80%;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.tab_page{
+  background-color: #d8d8d8;
+}
+.r_button{
+  min-height: 2rem;
+  border-radius: 0.3rem;
+  padding-top: 0.5rem;
+}
+
+
+.add_friends_button{
+  @extend .r_button;
+  background-color: #668FB6;
+  color: white;
+  text-decoration: none;
+}
+
+[v-cloak] { display: none }
+
+
+//
+
+#public_link{
+  .button_svg{
+    background-color: $mem-purple-color;
+  }
+  .link_button {
+    border: 0.1rem $mem-purple-color solid;
+  }
+}
+#embed{
+  .button_svg{
+    background-color: $mem-red-color;
+  }
+  .link_button {
+    border: 0.1rem $mem-red-color solid;
+  }
+}
+
+.link_button{
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: white;
+  width: 75%;
+  @extend .div-horizontal-center;
+
+  .button_svg{
+    width: 10%;
+    display: -webkit-inline-box;
+    padding: 1rem;
+    transition: width 0.2s;
+  }
+  .link_url{
+    width: 85%;
+    display: inline-block;
+    transition: width 0.2s;
+  }
+}
+
+.content_zone{
+  width: 80%;
+  transition: width 0.2s;
+  color: #454545;
+  h3{
+    font-size: 2rem;
+  }
+  .all_center p,h3{
+    text-align: center;
+  }
+}
+
+
+
+// Mobile
+@media (max-width: $small) {
+  .content_zone{
+    width: 100%;
+  }
+  .link_button{
+    .button_svg{
+      width: 30%;
+
+    }
+    .link_url{
+      width: 65%;
+
+    }
+  }
+}
+
+
+// Portrait Tablet
+@media (min-width: $small) and (max-width: $medium) {
+  .content_zone{
+    width: 100%;
+  }
+
+  .link_button{
+    .button_svg{
+      width: 20%;
+    }
+    .link_url{
+      width: 75%;
+    }
+  }
+
+  .facebook_example{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+// Landscape Tablet
+@media (min-width: $medium) and (max-width: $medium-large) {
+  .content_zone{
+    width: 90%;
+  }
+  .facebook_example{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+// Landscape Tablet
+@media (min-width: $medium-large) and (max-width: $large) {
+  .facebook_example{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
